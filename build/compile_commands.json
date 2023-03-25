@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/holmes/Cpp/demo/build/src",
+  "command": "/home/holmes/clang+llvm-16.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang++  -I/home/holmes/Cpp/demo/include -I/home/holmes/Cpp/demo/src -std=c++17 -std=c++17 -march=native -O3 -pthread -g -O3 -DNDEBUG -o CMakeFiles/demo.dir/StrBlob.cpp.o -c /home/holmes/Cpp/demo/src/StrBlob.cpp",
+  "file": "/home/holmes/Cpp/demo/src/StrBlob.cpp"
+},
+{
+  "directory": "/home/holmes/Cpp/demo/build/src",
+  "command": "/home/holmes/clang+llvm-16.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang++  -I/home/holmes/Cpp/demo/include -I/home/holmes/Cpp/demo/src -std=c++17 -std=c++17 -march=native -O3 -pthread -g -O3 -DNDEBUG -o CMakeFiles/demo.dir/data_struct.cpp.o -c /home/holmes/Cpp/demo/src/data_struct.cpp",
+  "file": "/home/holmes/Cpp/demo/src/data_struct.cpp"
+},
+{
+  "directory": "/home/holmes/Cpp/demo/build/src",
+  "command": "/home/holmes/clang+llvm-16.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang++  -I/home/holmes/Cpp/demo/include -I/home/holmes/Cpp/demo/src -std=c++17 -std=c++17 -march=native -O3 -pthread -g -O3 -DNDEBUG -o CMakeFiles/demo.dir/main.cpp.o -c /home/holmes/Cpp/demo/src/main.cpp",
+  "file": "/home/holmes/Cpp/demo/src/main.cpp"
+},
+{
+  "directory": "/home/holmes/Cpp/demo/build/src",
+  "command": "/home/holmes/clang+llvm-16.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang++  -I/home/holmes/Cpp/demo/include -I/home/holmes/Cpp/demo/src -std=c++17 -std=c++17 -march=native -O3 -pthread -g -O3 -DNDEBUG -o CMakeFiles/demo.dir/overload_symbols.cpp.o -c /home/holmes/Cpp/demo/src/overload_symbols.cpp",
+  "file": "/home/holmes/Cpp/demo/src/overload_symbols.cpp"
+}
+]
