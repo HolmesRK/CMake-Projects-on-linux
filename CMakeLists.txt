@@ -7,6 +7,7 @@ enable_testing()
 # aux_source_directory(. DIR_SRCS)
 # add_executable(demo ${DIR_SRCS})
 
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -L/lib/x86_64-linux-gnu/ -lstdc++")
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
@@ -39,7 +40,7 @@ PROJECT( demo )                       #设定工程名
 set( CMAKE_BUILD_TYPE Release )
 
 # 设置编译选项
-# 允许c++11标准、O3优化、多线程。match选项可避免一些cpu上的问题
+# 允许c++17标准、O3优化、多线程。match选项可避免一些cpu上的问题
 set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -march=native -O3 -pthread" )
 # 设置调试断点
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g")

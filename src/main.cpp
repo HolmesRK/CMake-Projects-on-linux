@@ -1,10 +1,13 @@
-#include "Overload_symbols.h"
-#include "Data_struct.h"
 #include "StrBlob.h"
+#include "bst.h"
+#include "data_struct.h"
+#include "overload_symbols.h"
 #include <algorithm>
+#include <iomanip>
 #include <iostream>
 #include <iterator>
 #include <map>
+#include <memory>
 #include <numeric>
 #include <stack>
 #include <string>
@@ -14,39 +17,21 @@
 using std::cout, std::endl;
 using std::vector, std::string;
 
-vector<int> nums;
-int dif(TreeNode* root)
+void depth(TreeNode* root)
 {
-    if (!root) {
-        return 0;
+    if (root == nullptr) {
+        return ;
     }
-    dif(root->left);
-    nums.push_back(root->val);
-    dif(root->right);
-
-    return 0;
-}
-int getMinimumDifference(TreeNode* root)
-{
-    dif(root);
-    vector<int> diffnums(nums.size() - 1);
-    for (int i = 0; i < nums.size() - 1; ++i) {
-        diffnums[i] = nums[i+1] - nums[i];
-    }
-    sort(diffnums.begin(), diffnums.end());
-
-    return diffnums[0];
+    depth(root->left);
+    std::cout << root->val;
+    depth(root->right);
 }
 
 int main()
 {
-    vector<int> sequnce { 4, 2, 6, 1, 3 };
-    Tree tree;
-    auto* root = tree.creat_tree_by_sequence(sequnce);
-    
-    auto ans = getMinimumDifference(root);
-
-    cout << ans << endl;
+    vector<int> nums { 3, 5, 7, 6, 3 ,4,5};
+    shared_ptr<Tree> tree = make_shared<Tree>(nums);
+    depth(tree->get_root());
 
     return 0;
 }

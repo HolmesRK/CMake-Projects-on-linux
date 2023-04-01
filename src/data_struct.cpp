@@ -1,5 +1,5 @@
 #pragma
-#include "Data_struct.h"
+#include "data_struct.h"
 constexpr auto Error_val = 9999; // 超出指定范围的值视为无效值，
                                  // 在树中表示空节点
                                  // 暂定9999，以后可能根据题目情况更改
@@ -35,12 +35,30 @@ ListNode* LinkList::get_head()
     return this->head;
 }
 
+// 二叉树部分
+
+Tree::Tree()
+    : root(nullptr)
+{
+}
+
+Tree::Tree(const std::vector<int>& list)
+    : root(nullptr)
+{
+    creat_tree_by_sequence(list);
+}
+
+Tree::~Tree()
+{
+    destroyTree(this->root);
+}
+
 /*
     依照层序序列，创建数，返回根节点。
     参数列表：
         list(vector<int>): 二叉树的层序序列
 */
-TreeNode* Tree::creat_tree_by_sequence(vector<int> list)
+TreeNode* Tree::creat_tree_by_sequence(const vector<int>& list)
 {
     if (list.empty()) {
         return this->root;
@@ -52,10 +70,10 @@ TreeNode* Tree::creat_tree_by_sequence(vector<int> list)
     qu.push(node);
     for (int i = 1; i < list.size(); i++) {
         node = qu.front();
-        if (!node->left && list[i] != Error_val) {
+        if (node->left == nullptr && list[i] != Error_val) {
             node->left = new TreeNode(list[i]);
             qu.push(node->left);
-        } else if (!node->right && list[i] != Error_val) {
+        } else if (node->right == nullptr && list[i] != Error_val) {
             node->right = new TreeNode(list[i]);
             qu.push(node->right);
             qu.pop();
@@ -72,4 +90,16 @@ TreeNode* Tree::creat_tree_by_sequence(vector<int> list)
 TreeNode* Tree::get_root()
 {
     return this->root;
+}
+
+/*
+    递归删除对象。
+*/
+void Tree::destroyTree(TreeNode* node)
+{
+    if (node != nullptr) {
+        destroyTree(node->left);
+        destroyTree(node->right);
+        delete node;
+    }
 }

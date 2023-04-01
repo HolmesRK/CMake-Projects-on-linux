@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
-  "../../bin/demo"
-  "../../bin/demo.pdb"
+  "/home/holmes/Cpp/demo/bin/demo"
+  "/home/holmes/Cpp/demo/bin/demo.pdb"
   "CMakeFiles/demo.dir/StrBlob.cpp.o"
   "CMakeFiles/demo.dir/StrBlob.cpp.o.d"
+  "CMakeFiles/demo.dir/bst.cpp.o"
+  "CMakeFiles/demo.dir/bst.cpp.o.d"
   "CMakeFiles/demo.dir/data_struct.cpp.o"
   "CMakeFiles/demo.dir/data_struct.cpp.o.d"
   "CMakeFiles/demo.dir/main.cpp.o"

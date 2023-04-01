@@ -21,6 +21,7 @@ LabelsForSubprojects:
 
 # Submission information
 SubmitURL: http://
+SubmitInactivityTimeout: 
 
 # Dashboard start time
 NightlyStartTime: 00:00:00 EDT
@@ -44,7 +45,7 @@ SVNOptions:
 SVNUpdateOptions: 
 
 # Git options
-GITCommand: 
+GITCommand: /usr/bin/git
 GITInitSubmodules: 
 GITUpdateOptions: 
 GITUpdateCustom: 
@@ -57,13 +58,13 @@ P4UpdateOptions:
 P4UpdateCustom: 
 
 # Generic update command
-UpdateCommand: 
+UpdateCommand: /usr/bin/git
 UpdateOptions: 
-UpdateType: 
+UpdateType: git
 
 # Compiler info
-Compiler: /home/holmes/clang+llvm-16.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang++
-CompilerVersion: 16.0.0
+Compiler: /usr/bin/clang++
+CompilerVersion: 15.0.6
 
 # Dynamic analysis (MemCheck)
 PurifyCommand: 
