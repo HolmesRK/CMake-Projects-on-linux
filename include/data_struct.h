@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SALES_DATA_H
-#define SALES_DATA_H
+#ifndef DATA_STRUCT_H
+#define DATA_STRUCT_H
 /*
     此文件用于声明常用的数据类型和类。
     成员函数体位于同名cpp文件。
@@ -88,16 +88,12 @@ struct TreeNode {
 
 /// leetcode 二叉树类对象
 class Tree {
-private:
-    TreeNode* root;
-    // 层序创建二叉树,返回根节点.
-    TreeNode* creat_by_sequence(TreeNode* root, const vector<int> &list);
-
 public:
     Tree();                         // 默认构造函数
     Tree(const std::vector<int>&);  // 输入vector版本的构造函数
     Tree(const Tree&);              // 拷贝构造函数
     ~Tree();                        // 析构函数
+    Tree& operator=(const Tree&);   // 重载赋值运算符
 
     // 层序创建二叉树
     void creat_by_sequence(const std::vector<int>&);
@@ -105,6 +101,10 @@ public:
     // 获取根节点.
     TreeNode* get_root();
     // 递归删除对象
-    
+
+private:
+    TreeNode* root;
+    // 层序创建二叉树,返回根节点.
+    TreeNode* creat_by_sequence(TreeNode* root, const vector<int>& list);
 };
-#endif // !SALES_DATA_H
+#endif // !DATA_STRUCT_H

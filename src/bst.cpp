@@ -1,7 +1,6 @@
 #include "bst.h"
 #include "data_struct.h"
 #include <iostream>
-using namespace std;
 
 // 默认构造函数
 BST::BST()
@@ -25,6 +24,17 @@ BST::BST(const BST&) = default;
 BST::~BST()
 {
     destroy(bstroot);   // 递归删除所有节点
+}
+
+// 重载赋值运算符
+BST& BST::operator=(const BST& bst)
+{
+    if (this != &bst) {
+        destroy(bstroot);
+        bstroot = bst.bstroot;
+    }
+
+    return *this;
 }
 
 // 获取根节点
@@ -51,12 +61,6 @@ bool BST::search(int val)
     return search(bstroot, val);
 }
 
-// 查找最小值
-int BST::findMin()
-{
-    return findMin(bstroot)->val;
-}
-
 // 打印中序序列
 void BST::inorder()
 {
@@ -64,14 +68,10 @@ void BST::inorder()
     std::cout << std::endl;
 }
 
-// 重载赋值运算符
-BST& BST::operator=(const BST& bst)
+// 查找最小值
+int BST::findMin()
 {
-    if (this != &bst) {
-        bstroot = bst.bstroot;
-    }
-    
-    return *this;
+    return findMin(bstroot)->val;
 }
 
 
@@ -142,7 +142,7 @@ void BST::inorder(TreeNode* node)
         return;
     }
     inorder(node->left);
-    cout << node->val << " ";
+    std::cout << node->val << " ";
     inorder(node->right);
 }
 

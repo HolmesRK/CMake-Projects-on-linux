@@ -23,7 +23,7 @@ void depth(const TreeNode* root)
         return ;
     }
     depth(root->left);
-    std::cout << root->val;
+    std::cout << root->val << " ";
     depth(root->right);
 }
 
@@ -32,6 +32,7 @@ int main()
     vector<int> nums { 3, 5, 7, 6, 3 ,4,5};
     shared_ptr<BST> tree = make_shared<BST>(nums);
     tree->inorder();
+    tree->remove(3);
     cout << tree->findMin() << endl;
 
 

@@ -1,6 +1,5 @@
-#pragma
 #include "data_struct.h"
-constexpr auto Error_val = 9999; // 超出指定范围的值视为无效值，
+constexpr auto Error_val = 99999; // 超出指定范围的值视为无效值，
                                  // 在树中表示空节点
                                  // 暂定9999，以后可能根据题目情况更改
 
@@ -57,6 +56,16 @@ Tree::Tree(const Tree&) = default;
 Tree::~Tree()
 {
     destroy(this->root);
+}
+
+// 重载赋值运算符
+Tree& Tree::operator=(const Tree& tree)
+{
+    if (&tree != this) {
+        destroy(root);
+        root = tree.root;
+    }
+    return *this;
 }
 
 // 层序创建二叉树

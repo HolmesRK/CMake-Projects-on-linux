@@ -19,6 +19,7 @@ public:
     explicit BST(const std::vector<int>& nums);
     BST(const BST&);
     ~BST();
+    BST& operator=(const BST&); // 重载赋值运算符
 
     TreeNode* get_root();   // 获取根节点
     void insert(int val);   // 插入元素
@@ -27,7 +28,8 @@ public:
     void inorder();         // 打印中序序列
     int findMin();          // 查找最小值
 
-    BST& operator=(const BST&);       // 重载赋值运算符
+    
+    
 private:
     TreeNode* bstroot;
     TreeNode* insert(TreeNode* node, int val);
