@@ -1,0 +1,1 @@
+/usr/bin/clang++ -std=c++17 -std=c++17 -march=native -O3 -pthread -g -O3 -DNDEBUG  -L/lib/x86_64-linux-gnu/ -lstdc++ -rdynamic CMakeFiles/demo.dir/main.cpp.o -o /home/holmes/Cpp/demo/bin/demo   -L/home/holmes/Cpp/demo/lib  -Wl,-rpath,/home/holmes/Cpp/demo/lib /home/holmes/Cpp/demo/lib/libPackages.so 

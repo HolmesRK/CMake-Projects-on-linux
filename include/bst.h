@@ -13,19 +13,21 @@
 #include "data_struct.h"
 #include <cstddef>
 
-
-class BST:Tree {
+class BST : Tree {
 public:
     BST();
-    BST(const std::vector<int> &nums);
+    explicit BST(const std::vector<int>& nums);
     BST(const BST&);
     ~BST();
-    TreeNode* get_root();
-    void insert(int val);       // 插入元素
-    void remove(int val);       // 删除元素
-    bool search(int val);       // 查找元素
-    void inorder();             // 打印中序序列
 
+    TreeNode* get_root();   // 获取根节点
+    void insert(int val);   // 插入元素
+    void remove(int val);   // 删除元素
+    bool search(int val);   // 查找元素
+    void inorder();         // 打印中序序列
+    int findMin();          // 查找最小值
+
+    BST& operator=(const BST&);       // 重载赋值运算符
 private:
     TreeNode* bstroot;
     TreeNode* insert(TreeNode* node, int val);

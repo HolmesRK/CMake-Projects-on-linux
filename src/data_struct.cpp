@@ -35,22 +35,34 @@ ListNode* LinkList::get_head()
     return this->head;
 }
 
-// 二叉树部分
+// 二叉树部分---------------------------------------------
 
+// 默认构造函数
 Tree::Tree()
     : root(nullptr)
 {
 }
 
+// vector版本的构造函数
 Tree::Tree(const std::vector<int>& list)
     : root(nullptr)
 {
-    creat_tree_by_sequence(list);
+    creat_by_sequence(list);
 }
 
+// 拷贝构造函数
+Tree::Tree(const Tree&) = default;
+
+// 析构函数
 Tree::~Tree()
 {
-    destroyTree(this->root);
+    destroy(this->root);
+}
+
+// 层序创建二叉树
+void Tree::creat_by_sequence(const std::vector<int>& nums)
+{
+    root = creat_by_sequence(root, nums);
 }
 
 /*
@@ -58,7 +70,7 @@ Tree::~Tree()
     参数列表：
         list(vector<int>): 二叉树的层序序列
 */
-TreeNode* Tree::creat_tree_by_sequence(const vector<int>& list)
+TreeNode* Tree::creat_by_sequence(TreeNode* root, const vector<int>& list)
 {
     if (list.empty()) {
         return this->root;
@@ -95,11 +107,11 @@ TreeNode* Tree::get_root()
 /*
     递归删除对象。
 */
-void Tree::destroyTree(TreeNode* node)
+void Tree::destroy(TreeNode* node)
 {
     if (node != nullptr) {
-        destroyTree(node->left);
-        destroyTree(node->right);
+        destroy(node->left);
+        destroy(node->right);
         delete node;
     }
 }

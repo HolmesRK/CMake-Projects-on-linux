@@ -55,9 +55,9 @@ SET( EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET( LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib) 
 
 #并且把该目录设为连接目录
-LINK_DIRECTORIES( ${PROJECT_SOURCE_DIR}/lib)
+link_directories( ${PROJECT_SOURCE_DIR}/lib)
 #
-find_package (Threads REQUIRED)
+# find_package (Threads REQUIRED)
 #设定头文件目录
 #INCLUDE_DIRECTORIES( ${PROJECT_SOURCE_DIR}/include)
 
@@ -65,9 +65,9 @@ find_package (Threads REQUIRED)
 ADD_SUBDIRECTORY( ${PROJECT_SOURCE_DIR}/src)
 # 或则是ADD_SUBDIRECTORY( src)
 
-# add_executable(demo main.cpp)
+add_executable(demo main.cpp)
 
 # 添加头文件路径
 target_include_directories(demo PUBLIC ${PROJECT_SOURCE_DIR}/include)
 # 添加链接库
-# target_link_libraries(demo Packages)
+target_link_libraries(demo Packages)

@@ -3,11 +3,13 @@
 #include <iostream>
 using namespace std;
 
+// 默认构造函数
 BST::BST()
     : bstroot(get_root())
 {
 }
 
+// vector版本的构造函数
 BST::BST(const std::vector<int>& nums)
     : bstroot(get_root())
 {
@@ -16,37 +18,62 @@ BST::BST(const std::vector<int>& nums)
     }
 }
 
+// 拷贝构造函数
 BST::BST(const BST&) = default;
 
+// 析构函数
+BST::~BST()
+{
+    destroy(bstroot);   // 递归删除所有节点
+}
+
+// 获取根节点
 TreeNode* BST::get_root()
 {
     return this->bstroot;
 }
 
+// 插入节点
 void BST::insert(int val)
 {
     bstroot = insert(bstroot, val);
 }
 
+// 删除节点
 void BST::remove(int val)
 {
     bstroot = remove(bstroot, val);
 }
 
+// 查找节点
 bool BST::search(int val)
 {
     return search(bstroot, val);
 }
 
+// 查找最小值
+int BST::findMin()
+{
+    return findMin(bstroot)->val;
+}
+
+// 打印中序序列
 void BST::inorder()
 {
     inorder(bstroot);
+    std::cout << std::endl;
 }
 
-BST::~BST()
+// 重载赋值运算符
+BST& BST::operator=(const BST& bst)
 {
-    destroyTree(bstroot);
+    if (this != &bst) {
+        bstroot = bst.bstroot;
+    }
+    
+    return *this;
 }
+
 
 TreeNode* BST::insert(TreeNode* node, int val)
 {
@@ -60,6 +87,7 @@ TreeNode* BST::insert(TreeNode* node, int val)
     }
     return node;
 }
+
 
 TreeNode* BST::remove(TreeNode* node, int val)
 {
@@ -91,6 +119,7 @@ TreeNode* BST::remove(TreeNode* node, int val)
     return node;
 }
 
+
 bool BST::search(TreeNode* node, int val)
 {
     if (node == nullptr) {
@@ -98,12 +127,14 @@ bool BST::search(TreeNode* node, int val)
     }
     if (val == node->val) {
         return true;
-    } else if (val < node->val) {
+    }
+    if (val < node->val) {
         return search(node->left, val);
     } else {
         return search(node->right, val);
     }
 }
+
 
 void BST::inorder(TreeNode* node)
 {
@@ -114,6 +145,7 @@ void BST::inorder(TreeNode* node)
     cout << node->val << " ";
     inorder(node->right);
 }
+
 
 TreeNode* BST::findMin(TreeNode* node)
 {

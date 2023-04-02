@@ -90,16 +90,21 @@ struct TreeNode {
 class Tree {
 private:
     TreeNode* root;
+    // 层序创建二叉树,返回根节点.
+    TreeNode* creat_by_sequence(TreeNode* root, const vector<int> &list);
 
 public:
-    Tree();
-    Tree(const std::vector<int>&);
-    ~Tree();
-    // 层序创建二叉树,返回根节点.
-    TreeNode* creat_tree_by_sequence(const vector<int> &list);
+    Tree();                         // 默认构造函数
+    Tree(const std::vector<int>&);  // 输入vector版本的构造函数
+    Tree(const Tree&);              // 拷贝构造函数
+    ~Tree();                        // 析构函数
+
+    // 层序创建二叉树
+    void creat_by_sequence(const std::vector<int>&);
+    void destroy(TreeNode* node);
     // 获取根节点.
     TreeNode* get_root();
     // 递归删除对象
-    void destroyTree(TreeNode* node);
+    
 };
 #endif // !SALES_DATA_H

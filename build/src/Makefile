@@ -147,25 +147,25 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/CMakeFiles/demo.dir/rule:
-	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/demo.dir/rule
-.PHONY : src/CMakeFiles/demo.dir/rule
+src/CMakeFiles/Packages.dir/rule:
+	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/Packages.dir/rule
+.PHONY : src/CMakeFiles/Packages.dir/rule
 
 # Convenience name for target.
-demo: src/CMakeFiles/demo.dir/rule
-.PHONY : demo
+Packages: src/CMakeFiles/Packages.dir/rule
+.PHONY : Packages
 
 # fast build rule for target.
-demo/fast:
-	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/build
-.PHONY : demo/fast
+Packages/fast:
+	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Packages.dir/build.make src/CMakeFiles/Packages.dir/build
+.PHONY : Packages/fast
 
 StrBlob.o: StrBlob.cpp.o
 .PHONY : StrBlob.o
 
 # target to build an object file
 StrBlob.cpp.o:
-	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/StrBlob.cpp.o
+	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Packages.dir/build.make src/CMakeFiles/Packages.dir/StrBlob.cpp.o
 .PHONY : StrBlob.cpp.o
 
 StrBlob.i: StrBlob.cpp.i
@@ -173,7 +173,7 @@ StrBlob.i: StrBlob.cpp.i
 
 # target to preprocess a source file
 StrBlob.cpp.i:
-	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/StrBlob.cpp.i
+	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Packages.dir/build.make src/CMakeFiles/Packages.dir/StrBlob.cpp.i
 .PHONY : StrBlob.cpp.i
 
 StrBlob.s: StrBlob.cpp.s
@@ -181,7 +181,7 @@ StrBlob.s: StrBlob.cpp.s
 
 # target to generate assembly for a file
 StrBlob.cpp.s:
-	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/StrBlob.cpp.s
+	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Packages.dir/build.make src/CMakeFiles/Packages.dir/StrBlob.cpp.s
 .PHONY : StrBlob.cpp.s
 
 bst.o: bst.cpp.o
@@ -189,7 +189,7 @@ bst.o: bst.cpp.o
 
 # target to build an object file
 bst.cpp.o:
-	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/bst.cpp.o
+	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Packages.dir/build.make src/CMakeFiles/Packages.dir/bst.cpp.o
 .PHONY : bst.cpp.o
 
 bst.i: bst.cpp.i
@@ -197,7 +197,7 @@ bst.i: bst.cpp.i
 
 # target to preprocess a source file
 bst.cpp.i:
-	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/bst.cpp.i
+	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Packages.dir/build.make src/CMakeFiles/Packages.dir/bst.cpp.i
 .PHONY : bst.cpp.i
 
 bst.s: bst.cpp.s
@@ -205,7 +205,7 @@ bst.s: bst.cpp.s
 
 # target to generate assembly for a file
 bst.cpp.s:
-	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/bst.cpp.s
+	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Packages.dir/build.make src/CMakeFiles/Packages.dir/bst.cpp.s
 .PHONY : bst.cpp.s
 
 data_struct.o: data_struct.cpp.o
@@ -213,7 +213,7 @@ data_struct.o: data_struct.cpp.o
 
 # target to build an object file
 data_struct.cpp.o:
-	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/data_struct.cpp.o
+	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Packages.dir/build.make src/CMakeFiles/Packages.dir/data_struct.cpp.o
 .PHONY : data_struct.cpp.o
 
 data_struct.i: data_struct.cpp.i
@@ -221,7 +221,7 @@ data_struct.i: data_struct.cpp.i
 
 # target to preprocess a source file
 data_struct.cpp.i:
-	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/data_struct.cpp.i
+	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Packages.dir/build.make src/CMakeFiles/Packages.dir/data_struct.cpp.i
 .PHONY : data_struct.cpp.i
 
 data_struct.s: data_struct.cpp.s
@@ -229,39 +229,15 @@ data_struct.s: data_struct.cpp.s
 
 # target to generate assembly for a file
 data_struct.cpp.s:
-	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/data_struct.cpp.s
+	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Packages.dir/build.make src/CMakeFiles/Packages.dir/data_struct.cpp.s
 .PHONY : data_struct.cpp.s
-
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/main.cpp.s
-.PHONY : main.cpp.s
 
 overload_symbols.o: overload_symbols.cpp.o
 .PHONY : overload_symbols.o
 
 # target to build an object file
 overload_symbols.cpp.o:
-	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/overload_symbols.cpp.o
+	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Packages.dir/build.make src/CMakeFiles/Packages.dir/overload_symbols.cpp.o
 .PHONY : overload_symbols.cpp.o
 
 overload_symbols.i: overload_symbols.cpp.i
@@ -269,7 +245,7 @@ overload_symbols.i: overload_symbols.cpp.i
 
 # target to preprocess a source file
 overload_symbols.cpp.i:
-	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/overload_symbols.cpp.i
+	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Packages.dir/build.make src/CMakeFiles/Packages.dir/overload_symbols.cpp.i
 .PHONY : overload_symbols.cpp.i
 
 overload_symbols.s: overload_symbols.cpp.s
@@ -277,7 +253,7 @@ overload_symbols.s: overload_symbols.cpp.s
 
 # target to generate assembly for a file
 overload_symbols.cpp.s:
-	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/overload_symbols.cpp.s
+	cd /home/holmes/Cpp/demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Packages.dir/build.make src/CMakeFiles/Packages.dir/overload_symbols.cpp.s
 .PHONY : overload_symbols.cpp.s
 
 # Help Target
@@ -291,7 +267,7 @@ help:
 	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... demo"
+	@echo "... Packages"
 	@echo "... StrBlob.o"
 	@echo "... StrBlob.i"
 	@echo "... StrBlob.s"
@@ -301,9 +277,6 @@ help:
 	@echo "... data_struct.o"
 	@echo "... data_struct.i"
 	@echo "... data_struct.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 	@echo "... overload_symbols.o"
 	@echo "... overload_symbols.i"
 	@echo "... overload_symbols.s"

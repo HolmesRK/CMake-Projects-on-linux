@@ -17,7 +17,7 @@
 using std::cout, std::endl;
 using std::vector, std::string;
 
-void depth(TreeNode* root)
+void depth(const TreeNode* root)
 {
     if (root == nullptr) {
         return ;
@@ -30,8 +30,10 @@ void depth(TreeNode* root)
 int main()
 {
     vector<int> nums { 3, 5, 7, 6, 3 ,4,5};
-    shared_ptr<Tree> tree = make_shared<Tree>(nums);
-    depth(tree->get_root());
+    shared_ptr<BST> tree = make_shared<BST>(nums);
+    tree->inorder();
+    cout << tree->findMin() << endl;
+
 
     return 0;
 }

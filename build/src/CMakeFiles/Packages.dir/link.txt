@@ -1,0 +1,1 @@
+/usr/bin/clang++ -fPIC -std=c++17 -std=c++17 -march=native -O3 -pthread -g -O3 -DNDEBUG -shared -Wl,-soname,libPackages.so -o /home/holmes/Cpp/demo/lib/libPackages.so CMakeFiles/Packages.dir/StrBlob.cpp.o CMakeFiles/Packages.dir/bst.cpp.o CMakeFiles/Packages.dir/data_struct.cpp.o CMakeFiles/Packages.dir/overload_symbols.cpp.o   -L/home/holmes/Cpp/demo/lib 
